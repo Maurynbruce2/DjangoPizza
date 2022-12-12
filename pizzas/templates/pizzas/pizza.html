@@ -16,19 +16,17 @@
 
 <p>Comments:</p>
 <ul>
-    {% for c in new_comment %} 
-    <li> 
-        <p>{{ c }}</p> 
-    </li>
+    {% for c in comment %}  
+        <li>{{ c.comment }}</li>
 
     {% empty %} 
-    <li> No comments have been made yet.</li> 
+    <p> No comments have been made yet.</p> 
     {% endfor %} 
 
 </ul> 
 
 <p>
-    <a href="{% url 'pizzas:new_comment' pizza.id %}">Add a comment</a>
+    <a href="{% url 'pizzas:new_comment' pizza.id %}"> Add a comment </a>
 </p>
 
 {% endblock content %}
