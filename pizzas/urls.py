@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 app_name = 'pizzas'
 
@@ -10,3 +11,5 @@ urlpatterns = [
     #path('comments/',views.comments,name='comments'),
     path('new_comment/<int:pizza_id>/',views.new_comment,name='new_comment'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()

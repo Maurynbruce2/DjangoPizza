@@ -13,6 +13,15 @@
     <li> No toppings for this pizza have been added yet.</li>
     {% endfor %}    
 </ul>
+<ul>
+    {% for p in image %}
+    <img src="{{ p.image.url }}" style='width:500px;height:500px'>
+
+    {% empty %} 
+    <p>No picture</p> 
+    {% endfor %}
+</ul>
+
 
 <p>Comments:</p>
 <ul>
